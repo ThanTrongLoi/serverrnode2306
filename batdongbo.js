@@ -94,3 +94,22 @@ function chia(a, b){
 chia(1,1)
 .then(tong => console.log(tong))
 .catch(error => console.log(error))
+
+cong(5,5)
+.then(tong => tru(tong, 1))
+.then(hieu => console.log(hieu))
+.catch(error => console.log(error))
+
+// async await
+async function tinhToan(){
+    try{
+        const tong = await cong(5,5)
+        const hieu = await tru(tong, 1)
+        console.log(hieu)
+    }catch(error){
+        console.log(error)
+    }
+}
+tinhToan();
+
+
