@@ -112,4 +112,12 @@ async function tinhToan(){
 }
 tinhToan();
 
-
+//Promise ---- nâng cao
+Promise.all(
+    [
+    cong(5,5),
+    tru(5, null)
+]
+)
+.then(values => console.log(values))
+.catch(error => console.log(error))
